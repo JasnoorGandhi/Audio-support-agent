@@ -1,0 +1,61 @@
+# ============================================================
+# Core dependencies
+# ============================================================
+
+# Web framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# LLM & RAG
+# Keep langchain / langchain-core on the same minor line (e.g. 0.3.x). Core 1.x
+# breaks langchain 0.3 imports such as langchain_core.memory.
+langchain>=0.3.25,<0.4
+langchain-core>=0.3.25,<0.4
+langchain-community>=0.3.25,<0.4
+langchain-openai>=0.2.0,<0.4
+langchain-groq>=0.2.0,<0.4
+openai>=1.0.0
+
+# Vector store & embeddings
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# UI
+streamlit>=1.28.0
+
+# ============================================================
+# STT options (install the one(s) you need)
+# ============================================================
+
+# Option A: Local Whisper (recommended, no API key)
+openai-whisper>=20231117
+
+# Option B: Deepgram (cloud, free $200 credits)
+# deepgram-sdk>=3.0.0
+
+# Option C: AssemblyAI (cloud, free tier)
+# assemblyai>=0.20.0
+
+# ============================================================
+# TTS options (install the one(s) you need)
+# ============================================================
+
+# Option A: Edge TTS (recommended, free Microsoft voices)
+edge-tts>=6.1.9
+
+# Option B: ElevenLabs (cloud, 10k chars/month free)
+# elevenlabs>=1.0.0
+
+# ============================================================
+# Audio utilities
+# ============================================================
+pydub>=0.25.1
+
+# ============================================================
+# General utilities
+# ============================================================
+python-dotenv>=1.0.0
+aiofiles>=23.0.0
+httpx>=0.25.0
+pydantic>=2.0.0
