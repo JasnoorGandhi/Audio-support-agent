@@ -53,7 +53,7 @@ Audio Output
 | Component | Technology |
 |---|---|
 | STT | OpenAI Whisper (local) |
-| LLM | Google Gemini 2.0 Flash |
+| LLM | llama-3.1-8b-instant|
 | Agent Framework | LangChain ReAct |
 | Vector Database | ChromaDB |
 | Embeddings | all-MiniLM-L6-v2 (via ChromaDB) |
@@ -92,11 +92,11 @@ audio_support_agent/
 ### Prerequisites
 - Python 3.11
 - FFmpeg installed and on PATH ([download here](https://www.gyan.dev/ffmpeg/builds/))
-- Google Gemini API key ([get free key](https://aistudio.google.com))
+- Groq API key (get free key at console.groq.com)
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/audio-support-agent.git
+git clone https://github.com/JasnoorGandhi/Audio-support-agent.git
 cd audio-support-agent
 ```
 
@@ -120,7 +120,8 @@ cp .env.example .env          # Linux/Mac
 
 Edit `.env`:
 ```env
-GOOGLE_API_KEY=your-gemini-api-key-here
+GROQ_API_KEY=your-groq-api-key-here
+LLM_MODEL=llama-3.1-8b-instant
 STT_PROVIDER=whisper
 STT_MODEL=base
 TTS_PROVIDER=edge_tts
